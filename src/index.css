@@ -7,35 +7,26 @@ body {
   margin: 0;
 }
 
-App {
-  width: 550px;
-}
-
-header {
+.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  color: #FFFFFF;
-  padding: 20px 30px;
+  height: 65px;
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  padding: 20px;
 }
 
-.logo-img {
-  width: 30px;
-  height: 25px;
-  align-self: center;
-  margin-right: 5px;
+.header--image {
+  height: 100%;
+  margin-right: 6px;
 }
 
-.logo-section {
-  display: flex;
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
 }
 
-.header-title {
-  font-weight: 700;
-  font-size: 20.7482px;
-}
-
-.header-text {
-  font-size: 12px;
+.header--project {
+  font-size: 0.75rem;
+  font-weight: 500;
 }
