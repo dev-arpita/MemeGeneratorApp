@@ -30,3 +30,30 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
 }
+
+.form-section {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  padding: 20px;
+  gap: 15px;
+}
+
+.form--input,
+.form--btn {
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.form--input {
+  border: 1px solid #D5D4D8;
+  padding: 10px;
+}
+
+.form--btn {
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  grid-column: 1 / -1;
+  cursor: pointer;
+}
