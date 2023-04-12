@@ -1,23 +1,44 @@
 import React from "react"
+import memesData from "../memesData.js"
 
 export default function Meme() {
+    /**
+     * Challenge: Get a random image from the `memesData` array
+     * when the "new meme image" button is clicked.
+     *
+     * Log the URL of the image to the console. (Don't worry
+     * about displaying the image yet)
+     */
+    let url
+
+    function getMemeImage() {
+        const memesArray = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        url = memesArray[randomNumber].url
+        console.log(url)
+    }
+
     return (
         <main>
-            <form className="form-section">
+            <p>{url}</p>
+            <div className="form">
                 <input
+                    type="text"
+                    placeholder="Top text"
                     className="form--input"
-                    placeholder="Type text"
-                    type="text"/>
+                />
                 <input
+                    type="text"
+                    placeholder="Bottom text"
                     className="form--input"
-                    placeholder="Type text"
-                    type="text"/>
-            <button
-                className="form--btn"
-                type="submit">Get a new meme image  🖼
-            </button>
-        </form>
-    </main>
-
+                />
+                <button
+                    className="form--button"
+                    onClick={getMemeImage}
+                >
+                    Get a new meme image 🖼
+                </button>
+            </div>
+        </main>
     )
 }
