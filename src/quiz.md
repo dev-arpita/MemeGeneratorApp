@@ -15,3 +15,16 @@
 
 4. What does "immutable" mean? Are props immutable? Is state immutable?
    Unchanging. Props are immutable. State is mutable.
+
+## useState - Changing state with a callback function
+
+/\*\*
+_ Note: if you ever need the old value of state
+_ to help you determine the new value of state,
+_ you should pass a callback function to your
+_ state setter function instead of using
+_ state directly. This callback function will
+_ receive the old value of state as its parameter,
+_ which you can then use to determine your new
+_ value of state.
+\*/
