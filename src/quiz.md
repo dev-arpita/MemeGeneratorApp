@@ -18,10 +18,6 @@
 
 ## useState - Changing state with a callback function
 
-import React from "react"
-
-export default function App() {
-const [count, setCount] = React.useState(0)
 /\*\*
 _ Note: if you ever need the old value of state
 _ to help you determine the new value of state,
@@ -32,23 +28,3 @@ _ receive the old value of state as its parameter,
 _ which you can then use to determine your new
 _ value of state.
 \*/
-function add() {
-setCount(prevCount => prevCount + 1)
-}
-// Challenge: update `substract` to use a callback function
-
-    function subtract() {
-        setCount(prevCount => prevCount - 1)
-    }
-
-    return (
-        <div className="counter">
-            <button className="counter--minus" onClick={subtract}>–</button>
-            <div className="counter--count">
-                <h1>{count}</h1>
-            </div>
-            <button className="counter--plus" onClick={add}>+</button>
-        </div>
-    )
-
-}
