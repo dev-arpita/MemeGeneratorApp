@@ -34,7 +34,10 @@ main {
   font-size: 0.75rem;
   font-weight: 500;
 }
-
+main{
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .form {
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
@@ -56,4 +59,8 @@ main {
   color: white;
   border: none;
   cursor: pointer;
+}
+.meme-img {
+  width: 100%;
+  margin-top: 30px;
 }

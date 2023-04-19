@@ -1,30 +1,17 @@
-1. How would you describe the concept of "state"?
-   A way for React to remember saved values from within a component.
-   This is similar to declaring variables from within a component,
-   with a few added bonuses (which we'll get to later)
+1. You have 2 options for what you can pass in to a
+   state setter function (e.g. `setCount`). What are they?
 
-2. When would you want to use props instead of state?
-   Anytime you want to pass data into a component so that
-   component can determine what will get displayed on the
-   screen.
+a. New value of state (setCount(42))
+b. Callback function - whatever the callback function
+returns === new value of state
 
-3. When would you want to use state instead of props?
-   Anytime you want a component to maintain some values from
-   within the component. (And "remember" those values even
-   when React re-renders the component).
+2. When would you want to pass the first option (from answer
+   above) to the state setter function?
 
-4. What does "immutable" mean? Are props immutable? Is state immutable?
-   Unchanging. Props are immutable. State is mutable.
+Whenever you don't need the previous value of state to determine
+what the new value of state should be.
 
-## useState - Changing state with a callback function
+3. When would you want to pass the second option (from answer
+   above) to the state setter function?
 
-/\*\*
-_ Note: if you ever need the old value of state
-_ to help you determine the new value of state,
-_ you should pass a callback function to your
-_ state setter function instead of using
-_ state directly. This callback function will
-_ receive the old value of state as its parameter,
-_ which you can then use to determine your new
-_ value of state.
-\*/
+Whenever you DO need the previous value to determine the new value
